@@ -1,0 +1,22 @@
+## Use the 8.0 version of Debian (stable)
+FROM ws-debian-base:jessie
+
+## Run a complete upgrade and insall apache2
+RUN apt-get update -y
+RUN apt-get dist-upgrade -y
+RUN apt-get install -y apache2
+
+## This is where the virtual hosts config files goes
+VOLUME /etc/apache2/sites-available
+
+## And this is where the virtual hosts files goes
+VOLUME /srv/www/
+
+## Allow some ports
+EXPOSE 80
+EXPOSE 443
+EXPOSE 8080
+EXPOSE 8443
+
+## Exec the daemon 
+CMD apache2ctl -DFOREGROUND
