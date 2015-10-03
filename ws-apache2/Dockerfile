@@ -1,5 +1,8 @@
 ## Use the 8.0 version of Debian (stable)
-FROM ws-debian-base:jessie
+FROM wesleyit/ws-debian-base:jessie
+
+## Author
+MAINTAINER Wesley Rodrigues da Silva <wesley.it@gmail.com>
 
 ## Run a complete upgrade and insall apache2
 RUN apt-get update -y
