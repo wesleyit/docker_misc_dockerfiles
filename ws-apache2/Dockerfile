@@ -4,7 +4,7 @@ FROM wesleyit/ws-debian-base:jessie
 ## Author
 MAINTAINER Wesley Rodrigues da Silva <wesley.it@gmail.com>
 
-## Run a complete upgrade and insall apache2
+## Run a complete upgrade and install apache2
 RUN apt-get update -y
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y apache2
