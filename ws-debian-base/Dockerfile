@@ -1,6 +1,9 @@
 ## Use the 8.0 version of Debian (stable)
 FROM debian:jessie
 
+## Author
+MAINTAINER Wesley Rodrigues da Silva <wesley.it@gmail.com>
+
 ## Include non-free software
 RUN grep "main contrib non-free" /etc/apt/sources.list || \
 		sed -i "s/main/main contrib non-free/" /etc/apt/sources.list
