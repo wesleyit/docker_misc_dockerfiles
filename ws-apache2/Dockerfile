@@ -10,7 +10,7 @@ RUN apt-get dist-upgrade -y
 RUN apt-get install -y apache2
 
 ## This is where the virtual hosts config files goes
-VOLUME /etc/apache2/sites-available
+VOLUME /etc/apache2
 
 ## And this is where the virtual hosts files goes
 VOLUME /srv/www/
