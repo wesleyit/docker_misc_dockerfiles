@@ -13,7 +13,7 @@ RUN apt-get install -y ruby ruby2.1 ruby-dev ruby2.1-dev
 VOLUME /data
 
 ## Improve the irx experience
-echo 'require \'irb/completion\'' > /root/.irbrc
+RUN echo require \'irb/completion\' > /root/.irbrc
 
 ## Improve the gem management
 add .gemrc /root/.gemrc
