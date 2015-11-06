@@ -14,7 +14,7 @@ RUN apt-get dist-upgrade -y
 
 ## Install some basic software and clean some caches
 RUN apt-get install curl wget vim-nox nmap psmisc \
-		bash-completion less git -y
+		bash-completion less git software-properties-common -y
 RUN apt-get autoremove -y
 RUN rm -rf /var/lib/apt/lists/*
 
