@@ -9,6 +9,9 @@ RUN apt-get update -y
 RUN apt-get dist-upgrade -y
 RUN apt-get install -y apache2
 
+## Enable SSL and Proxy 
+RUN a2enmod 'ssl*' 'proxy*'
+
 ## This is where the virtual hosts config files goes
 VOLUME /etc/apache2
 
