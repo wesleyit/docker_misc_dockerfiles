@@ -1,0 +1,5 @@
+AuthType Basic
+AuthName "Protected Area"
+AuthUserFile "/srv/www/default/.htpasswd"
+Require valid-user
+
