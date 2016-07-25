@@ -13,9 +13,11 @@ RUN apt-get install -y apache2
 RUN a2enmod 'ssl*' 'proxy*'
 
 ## This is where the virtual hosts config files goes
+ADD sites-enabled /etc/apache2/sites-enabled
 VOLUME /etc/apache2
 
 ## And this is where the virtual hosts files goes
+ADD www /srv/www
 VOLUME /srv/www/
 
 ## Allow some ports
