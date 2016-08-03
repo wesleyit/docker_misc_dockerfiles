@@ -36,6 +36,8 @@ RUN wget -O /tmp/apache-tomcat.tar.gz \
 ## Send our preconfigured server.xml to the container
 COPY logging.properties /opt/tomcat/conf/logging.properties
 COPY server.xml /opt/tomcat/conf/server.xml
+COPY tomcat-users.xml /opt/tomcat/conf/tomcat-users.xml
+COPY manager.xml /opt/tomcat/conf/Catalina/localhost/manager.xml
 
 ## Persistence and Ports
 VOLUME /opt/tomcat/webapps
