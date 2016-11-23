@@ -1,0 +1,12 @@
+<VirtualHost *:80>
+
+	ServerName localhost.localdomain
+	ServerAlias localhost
+	DocumentRoot /srv/www/default
+
+	<Directory /srv/www/default>
+		AllowOverride AuthConfig
+		Require all granted
+	</Directory>
+
+</VirtualHost>
